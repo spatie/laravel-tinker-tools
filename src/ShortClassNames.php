@@ -5,7 +5,7 @@ namespace Spatie\TinkerTools;
 class ShortClassNames
 {
     /** @var \Illuminate\Support\Collection */
-    public $classes = [];
+    public $classes;
 
     public static function register(string $classMapPath = null)
     {
