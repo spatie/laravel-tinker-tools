@@ -34,6 +34,12 @@ Next, create a file named `tinker.config.php` in the root of your Laravel app wi
 \Spatie\TinkerTools\ShortClassNames::register();
 ```
 
+Finally, dump the optimized version of the autoloader so `autoload_classmap.php` gets created.
+
+```bash
+composer dump-autoload -o
+```
+
 ## Usage
 
 Open up a tinker session with
