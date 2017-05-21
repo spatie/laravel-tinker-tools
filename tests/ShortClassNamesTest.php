@@ -17,11 +17,12 @@ class ShortClassNamesTest extends TestCase
             \NamespacedClass::getGreeting();
 
             $foundClass = true;
-        } catch (Error $error) {}
+        } catch (Error $error) {
+        }
 
         $this->assertFalse($foundClass);
 
-        ShortClassNames::register(__DIR__ . '/../vendor/composer/autoload_classmap.php');
+        ShortClassNames::register(__DIR__.'/../vendor/composer/autoload_classmap.php');
 
         $this->assertEquals('Oh, hi Mark', \NamespacedClass::getGreeting());
     }

@@ -16,7 +16,7 @@ class ShortClassNames
 
     public function __construct(string $classMapPath)
     {
-        $classFiles = include($classMapPath);
+        $classFiles = include $classMapPath;
 
         $this->classes = collect($classFiles)
             ->map(function (string $path, string $fqcn) {
