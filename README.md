@@ -38,7 +38,9 @@ Next, create a file named `tinker.config.php` in the root of your Laravel app wi
 
 Open up a tinker session with
 
-```php artisan tinker```
+```bash
+php artisan tinker
+```
 
 Inside that tinker session you can now use short class names:
 
@@ -48,11 +50,11 @@ NewsItem::first();
 
 ## A peek behind the curtains
 
-When you use a class that hasn't been loaded in yet, PHP  call registered autoloader functions. Such autoloader functions are responsible for loading up the requested class. In a typical project Composer will registerer and autoloader function that can  include `here file where the class is stored in. Composer has a few ways to locate the right files. For the most part it will convert the full namespace to a path. For example, when using a class `App\Models\NewsItem` Composer will load the file in `app/Models/NewsItem.php`. It's a bit more complicated behind the scenes but that's the gist of it. To make the process of find an class fast, Composer caches all the fully qualified classnames and their paths in the generated `autoload_classmap.php` which can be found in `vendor/composer`. 
+When you use a class that hasn't been loaded in yet, PHP will call the registered autoloader functions. Such autoloader functions are responsible for loading up the requested class. In a typical project Composer will register an autoloader function that can  `include` the file where the class is stored in. Composer has a few ways to locate the right files. In most cases it will convert use the fully qualified class name to a path. For example, when using a class `App\Models\NewsItem` Composer will load the file in `app/Models/NewsItem.php`. It's a bit more complicated behind the scenes but that's the gist of it. To make the process of find an class fast, Composer caches all the fully qualified classnames and their paths in the generated `autoload_classmap.php` which can be found in `vendor/composer`. 
 
-Now, to make this package work, `\Spatie\TinkerTools\ShortClassNames` will read ` Composer's `autoload_classmap.php` and [convert the fully qualified class names to short class names](TODO: add link). The result is a collection that being kept in [the  `$classes` property](TODO: add link)
+Now, to make this package work, `\Spatie\TinkerTools\ShortClassNames` will read Composer's `autoload_classmap.php` and [convert the fully qualified class names to short class names](https://github.com/spatie/laravel-tinker-tools/blob/d3a3287/src/ShortClassNames.php#L23). The result is a collection that being kept in [the `$classes` property](https://github.com/spatie/laravel-tinker-tools/blob/098e595/src/ShortClassNames.php#L8)
 
-Our class will also [register an autoloader](TODO: add link). When you use `NewsItem` in your code. PHP will first call Composer's autoloader. But of course that autoloader can't find the class. So the autoloader from this pacakge comes next. Our autoloader will use the aforementioned `$classes` collection to find to fully qualified class name. It will then use `class_alias` to alias `NewsItem` to `App\Models\NewsItem`.
+Our class will also [register an autoloader](https://github.com/spatie/laravel-tinker-tools/blob/098e595/src/ShortClassNames.php#L33). When you use `NewsItem` in your code. PHP will first call Composer's autoloader. But of course that autoloader can't find the class. So the autoloader from this pacakge comes next. Our autoloader will use the aforementioned `$classes` collection to find to fully qualified class name. It will then [use `class_alias`](https://github.com/spatie/laravel-tinker-tools/blob/098e595/src/ShortClassNames.php#L46) to alias `NewsItem` to `App\Models\NewsItem`.
 
 ## What happens if there are multiple classes witht same name?
 
@@ -91,7 +93,7 @@ If you discover any security related issues, please email freek@spatie.be instea
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
 
-We got the idea for `ShortClassnames` by reading the "Tailoring Tinker with custom config"`section of [Caleb Porzio](TODO: add link)'s excellent blogpost "[Supercharge Your Laravel Tinker Workflow](https://blog.tighten.co/supercharge-your-laravel-tinker-workflow)"
+We got the idea for `ShortClassnames` by reading the "Tailoring Tinker with custom config"`section of [Caleb Porzio](https://twitter.com/calebporzio)'s excellent blogpost "[Supercharge Your Laravel Tinker Workflow](https://blog.tighten.co/supercharge-your-laravel-tinker-workflow)"
 
 ## About Spatie
 
