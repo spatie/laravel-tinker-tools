@@ -1,0 +1,45 @@
+{
+    "name": "spatie/laravel-tinker-tools",
+    "description": "Flysystem Adapter for the Dropbox v2 API",
+    "keywords": [
+        "spatie",
+        "laravel-tinker-tools",
+        "flysystem",
+        "dropbox",
+        "v2",
+        "api"
+    ],
+    "homepage": "https://github.com/spatie/laravel-tinker-tools",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Freek Van der Herten",
+            "email": "freek@spatie.be",
+            "homepage": "https://spatie.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/support": "5.3.*|5.4.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spatie\\TinkerTools\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spatie\\TinkerTools\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
