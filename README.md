@@ -34,6 +34,12 @@ Next, create a file named `tinker.config.php` in the root of your Laravel app wi
 \Spatie\TinkerTools\ShortClassNames::register();
 ```
 
+Add this line to your `.env` file:
+
+```
+PSYSH_CONFIG=tinker.config.php
+```
+
 Finally, dump the optimized version of the autoloader so `autoload_classmap.php` gets created.
 
 ```bash
@@ -67,6 +73,10 @@ Our class will also [register an autoloader](https://github.com/spatie/laravel-t
 Now you might think what'll happen it there are more classes with the same name in different namespaces? E.g. `App\Models\NewsItem`, `Vendor\PackageName\NewsItem`. Well, `autoload_classmap.php` is sorted alphabetically on the fully qualified namespace. So `App\Models\NewsItem` will be used and not `Vendor\PackageName\NewsItem`.
 
 Because `App` starts with an "A" there's a high chance that, in case of a collision, a class inside inside your application will get picked. Currently there are no ways to alter this. I'd accept PRs that make this behaviour customizable.
+
+## Need more tinker magic?
+
+There are a lot of other options that can be set in `tinker.config.php`. Learn all the options by reading [the official psysh configuration documentation](http://psysh.org/#configure).
 
 ## Postcardware
 
