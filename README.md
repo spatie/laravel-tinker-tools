@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-tinker-tools.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-tinker-tools)
 [![Build Status](https://img.shields.io/travis/spatie/laravel-tinker-tools/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-tinker-tools)
-[![StyleCI](https://styleci.io/repos/xxx/shield?branch=master)](https://styleci.io/repos/xxx)
+[![StyleCI](https://styleci.io/repos/91980495/shield?branch=master)](https://styleci.io/repos/91980495)
 [![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-tinker-tools.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-tinker-tools)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-tinker-tools.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-tinker-tools)
 
