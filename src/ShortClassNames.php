@@ -9,7 +9,7 @@ class ShortClassNames
 
     public static function register(string $classMapPath = null)
     {
-        $classMap = $classMapPath ?? base_path('vendor/composer/autoload_classmap.php');
+        $classMapPath = $classMapPath ?? base_path('vendor/composer/autoload_classmap.php');
 
         (new static($classMapPath))->registerAutoloader();
     }
