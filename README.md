@@ -1,4 +1,4 @@
-# Use the short class names in an Artisan tinker session
+# Use short class names in an Artisan tinker session
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-tinker-tools.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-tinker-tools)
 [![Build Status](https://img.shields.io/travis/spatie/laravel-tinker-tools/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-tinker-tools)
