@@ -42,7 +42,7 @@ composer dump-autoload -o
 
 ## Usage
 
-Open up a tinker session with
+Open up a tinker session with:
 
 ```bash
 php artisan tinker
@@ -62,7 +62,7 @@ Now, to make this package work, `\Spatie\TinkerTools\ShortClassNames` will read 
 
 Our class will also [register an autoloader](https://github.com/spatie/laravel-tinker-tools/blob/098e595/src/ShortClassNames.php#L33). When you use `NewsItem` in your code. PHP will first call Composer's autoloader. But of course that autoloader can't find the class. So the autoloader from this pacakge comes next. Our autoloader will use the aforementioned `$classes` collection to find to fully qualified class name. It will then [use `class_alias`](https://github.com/spatie/laravel-tinker-tools/blob/098e595/src/ShortClassNames.php#L46) to alias `NewsItem` to `App\Models\NewsItem`.
 
-## What happens if there are multiple classes witht same name?
+## What happens if there are multiple classes with same name?
 
 Now you might think what'll happen it there are more classes with the same name in different namespaces? E.g. `App\Models\NewsItem`, `Vendor\PackageName\NewsItem`. Well, `autoload_classmap.php` is sorted alphabetically on the fully qualified namespace. So `App\Models\NewsItem` will be used and not `Vendor\PackageName\NewsItem`.
 
