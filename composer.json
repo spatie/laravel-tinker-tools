@@ -1,6 +1,6 @@
 {
     "name": "spatie/laravel-tinker-tools",
-    "description": "Flysystem Adapter for the Dropbox v2 API",
+    "description": "Use short class names in an Artisan tinker session",
     "keywords": [
         "spatie",
         "laravel-tinker-tools",
