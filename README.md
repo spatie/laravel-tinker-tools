@@ -26,18 +26,12 @@ First install the package via composer:
 composer require spatie/laravel-tinker-tools
 ```
 
-Next, create a file named `tinker.config.php` in the root of your Laravel app with this content:
+Next, create a file named `.psysh.php` in the root of your Laravel app with this content:
 
 ```php
 <?php
 
 \Spatie\TinkerTools\ShortClassNames::register();
-```
-
-Add this line to your `.env` file:
-
-```
-PSYSH_CONFIG=tinker.config.php
 ```
 
 Finally, dump the optimized version of the autoloader so `autoload_classmap.php` gets created.
