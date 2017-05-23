@@ -1,4 +1,4 @@
-# Use short class names in an Artisan tinker session
+# Use short class names in an Artisan Tinker session
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-tinker-tools.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-tinker-tools)
 [![Build Status](https://img.shields.io/travis/spatie/laravel-tinker-tools/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-tinker-tools)
@@ -20,7 +20,7 @@ NewsItem::first();
 
 ## Installation
 
-First install the package via composer:
+First install the package via Composer:
 
 ``` bash
 composer require spatie/laravel-tinker-tools
@@ -34,7 +34,7 @@ Next, create a file named `.psysh.php` in the root of your Laravel app with this
 \Spatie\TinkerTools\ShortClassNames::register();
 ```
 
-Finally, dump the optimized version of the autoloader so `autoload_classmap.php` gets created.
+Finally, dump the optimized version of the autoloader so `autoload_classmap.php` gets created:
 
 ```bash
 composer dump-autoload -o
@@ -42,13 +42,13 @@ composer dump-autoload -o
 
 ## Usage
 
-Open up a tinker session with:
+Open up a Tinker session with:
 
 ```bash
 php artisan tinker
 ```
 
-Inside that tinker session you can now use short class names:
+Inside that Tinker session you can now use short class names:
 
 ```php
 NewsItem::first();
@@ -70,7 +70,7 @@ Now you might wonder what'll happen it there are more classes with the same name
 
 Because `App` starts with an "A" there's a high chance that, in case of a collision, a class inside your application will get picked. Currently there are no ways to alter this. I'd accept PRs that make this behaviour customizable.
 
-## Need more tinker magic?
+## Need more Tinker magic?
 
 There are a lot of other options that can be set in `tinker.config.php`. Learn all the options by reading [the official psysh configuration documentation](http://psysh.org/#configure).
 
@@ -105,7 +105,7 @@ If you discover any security related issues, please email freek@spatie.be instea
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
 
-We got the idea for `ShortClassnames` by reading the "Tailoring Tinker with custom config"`section of [Caleb Porzio](https://twitter.com/calebporzio)'s excellent blogpost "[Supercharge Your Laravel Tinker Workflow](https://blog.tighten.co/supercharge-your-laravel-tinker-workflow)"
+We got the idea for `ShortClassnames` by reading the "Tailoring Tinker with custom config"`section of [Caleb Porzio](https://twitter.com/calebporzio)'s excellent blogpost "[Supercharge Your Laravel Tinker Workflow](https://blog.tighten.co/supercharge-your-laravel-tinker-workflow)".
 
 ## About Spatie
 
