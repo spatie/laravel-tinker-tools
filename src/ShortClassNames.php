@@ -2,6 +2,8 @@
 
 namespace Spatie\TinkerTools;
 
+use ReflectionClass;
+
 class ShortClassNames
 {
     /** @var \Illuminate\Support\Collection */
@@ -36,7 +38,11 @@ class ShortClassNames
     public function aliasClass($findClass)
     {
         $class = $this->classes->first(function ($class) use ($findClass) {
-            return $class['name'] === $findClass;
+            if ($class['name'] !== $findClass) {
+                return false;
+            };
+
+            return ! (new ReflectionClass($class['fqcn']))->isInterface();
         });
 
         if (! $class) {
