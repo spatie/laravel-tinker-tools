@@ -40,7 +40,7 @@ class ShortClassNames
         $class = $this->classes->first(function ($class) use ($findClass) {
             if ($class['name'] !== $findClass) {
                 return false;
-            };
+            }
 
             return ! (new ReflectionClass($class['fqcn']))->isInterface();
         });
