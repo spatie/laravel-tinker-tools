@@ -1,3 +1,5 @@
+**The functionality of this package is built into Laravel 5.5 and above, only install this in older Laravel versions**
+
 # Use short class names in an Artisan Tinker session
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-tinker-tools.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-tinker-tools)
