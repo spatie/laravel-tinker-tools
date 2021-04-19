@@ -14,7 +14,7 @@ When using Artisan's Tinker command it can be quite bothersome having to type th
 \App\Models\NewsItem::first();
 ```
 
-This package contains a class that, when fully installed let's you use the short class names:
+This package contains a class that, when fully installed lets you use the short class names:
 
 ```php
 NewsItem::first();
