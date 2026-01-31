@@ -1,6 +1,3 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 **The functionality of this package is built into Laravel 5.5 and above, only install this in older Laravel versions**
 
 # Use short class names in an Artisan Tinker session
